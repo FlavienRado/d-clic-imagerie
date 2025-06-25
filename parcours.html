@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcours Patient - Imagerie Médicale Simplifiée</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Votre parcours en imagerie médicale</h1>
+            <p>Ce qui vous attend avant, pendant et après l'examen</p>
+        </div>
+    </header>
+
+    <nav>
+        <!-- Même navigation que index.html -->
+    </nav>
+
+    <main class="container">
+        <section class="journey-timeline">
+            <h2>Les étapes de votre examen</h2>
+            
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="timeline-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>1. La prescription</h3>
+                        <p>Votre médecin vous prescrit un examen d'imagerie adapté à votre situation. Il vous expliquera pourquoi cet examen est nécessaire.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-step">
+                    <div class="timeline-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2. La prise de rendez-vous</h3>
+                        <p>Contactez le service d'imagerie pour fixer une date. On vous indiquera les préparations éventuelles (jeûne, prise de médicaments...).</p>
+                    </div>
+                </div>
+                
+                <!-- Ajouter les autres étapes -->
+            </div>
+        </section>
+
+        <section class="before-exam">
+            <h2>Avant l'examen</h2>
+            <div class="before-grid">
+                <div class="before-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Alimentation</h3>
+                    <p>Pour certains examens (scanner abdominal, échographie), il faut être à jeun. On vous dira précisément quoi faire.</p>
+                </div>
+                <div class="before-card">
+                    <i class="fas fa-pills"></i>
+                    <h3>Médicaments</h3>
+                    <p>Prenez vos traitements habituels sauf contre-indication. Signalez tous vos médicaments.</p>
+                </div>
+                <!-- Ajouter d'autres cartes -->
+            </div>
+        </section>
+
+        <section class="during-exam">
+            <h2>Pendant l'examen</h2>
+            <div class="during-content">
+                <div class="during-text">
+                    <h3>Ce qui se passe</h3>
+                    <ul>
+                        <li>Vous serez accueilli par le manipulateur radio qui vérifiera votre identité et votre ordonnance</li>
+                        <li>On vous expliquera le déroulement et les consignes à suivre</li>
+                        <li>Pour certains examens, on vous posera une perfusion pour injecter un produit de contraste</li>
+                        <li>Il faudra rester immobile pendant les acquisitions</li>
+                    </ul>
+                </div>
+                <div class="during-image">
+                    <img src="../assets/images/salle-examen.jpg" alt="Salle d'examen">
+                </div>
+            </div>
+        </section>
+
+        <section class="after-exam">
+            <h2>Après l'examen</h2>
+            <div class="after-steps">
+                <div class="after-step">
+                    <h3>Immédiatement après</h3>
+                    <p>Vous pourrez généralement repartir tout de suite. En cas d'injection, on vous surveillera quelques minutes.</p>
+                </div>
+                <div class="after-step">
+                    <h3>Les résultats</h3>
+                    <p>Les images sont analysées par le radiologue qui rédige un compte-rendu envoyé à votre médecin. Délai : 24h à 72h selon l'urgence.</p>
+                </div>
+                <div class="after-step">
+                    <h3>Effets secondaires</h3>
+                    <p>Rares et généralement bénins (réaction au produit de contraste). Signalez tout symptôme inhabituel.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Même footer que index.html -->
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

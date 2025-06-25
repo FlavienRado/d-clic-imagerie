@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossaire - Imagerie Médicale Simplifiée</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Glossaire d'imagerie médicale</h1>
+            <p>Définitions simples des termes techniques</p>
+        </div>
+    </header>
+
+    <nav>
+        <!-- Même navigation que index.html -->
+    </nav>
+
+    <main class="container">
+        <section class="glossary-search">
+            <h2>Rechercher un terme</h2>
+            <div class="search-box">
+                <input type="text" id="glossary-search" placeholder="Tapez un mot...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </section>
+
+        <section class="glossary-list">
+            <div class="glossary-filter">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="general">Général</button>
+                <button class="filter-btn" data-filter="irm">IRM</button>
+                <button class="filter-btn" data-filter="scanner">Scanner</button>
+                <!-- Ajouter d'autres filtres -->
+            </div>
+
+            <div class="glossary-items">
+                <div class="glossary-item" data-category="general">
+                    <h3>Artefact</h3>
+                    <p>Anomalie sur une image médicale qui ne correspond pas à la réalité anatomique. Peut être dû au mouvement du patient, à des implants métalliques ou à des problèmes techniques.</p>
+                </div>
+                
+                <div class="glossary-item" data-category="scanner">
+                    <h3>Hyperdensité</h3>
+                    <p>Zone qui apparaît plus blanche sur un scanner, indiquant généralement une structure dense (comme un os ou un saignement).</p>
+                </div>
+                
+                <div class="glossary-item" data-category="irm">
+                    <h3>Séquence T1/T2</h3>
+                    <p>Différents réglages de l'IRM qui donnent des contrastes variés entre les tissus. Les médecins les utilisent pour identifier différentes pathologies.</p>
+                </div>
+                
+                <!-- Ajouter les autres termes -->
+            </div>
+        </section>
+
+        <section class="alphabet-index">
+            <h2>Index alphabétique</h2>
+            <div class="index-letters">
+                <a href="#A">A</a>
+                <a href="#B">B</a>
+                <a href="#C">C</a>
+                <!-- Ajouter toutes les lettres -->
+            </div>
+            
+            <div class="index-section" id="A">
+                <h3>A</h3>
+                <ul>
+                    <li><strong>Artefact :</strong> Voir définition ci-dessus</li>
+                    <li><strong>Attenuation :</strong> Diminution de l'intensité des rayons X lorsqu'ils traversent le corps</li>
+                </ul>
+            </div>
+            
+            <!-- Ajouter les autres sections -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- Même footer que index.html -->
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
