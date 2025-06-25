@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner - Imagerie Médicale Simplifiée</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="../../assets/images/logo.png" alt="Logo Imagerie Médicale Simplifiée" class="logo">
+            </div>
+            <div class="header-text">
+                <h1>Le Scanner (Tomodensitométrie)</h1>
+                <p>Examen rapide utilisant les rayons X pour obtenir des images en coupes</p>
+            </div>
+        </div>
+    </header>
 
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="../../index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="../../notions.html"><i class="fas fa-book"></i> Notions de base</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fas fa-procedures"></i> Examens <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="irm.html">IRM</a></li>
+                        <li><a class="active" href="scanner.html">Scanner</a></li>
+                        <li><a href="radiographie.html">Radiographie</a></li>
+                        <li><a href="echographie.html">Échographie</a></li>
+                        <li><a href="mammographie.html">Mammographie</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../equipe.html"><i class="fas fa-user-md"></i> Équipe médicale</a></li>
+                <li><a href="../../parcours.html"><i class="fas fa-user"></i> Parcours patient</a></li>
+                <li><a href="../../ressources.html"><i class="fas fa-file-pdf"></i> Ressources</a></li>
+                <li><a href="../../glossaire.html"><i class="fas fa-book-open"></i> Glossaire</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="exam-overview">
+            <div class="exam-image">
+                <img src="../../assets/images/scanner-appareil.jpg" alt="Appareil de scanner">
+                <p class="caption">Appareil de scanner - Le patient est allongé sur une table mobile</p>
+            </div>
+            <div class="exam-description">
+                <h2>Qu'est-ce qu'un scanner ?</h2>
+                <p>Le scanner (ou tomodensitométrie) est une technique d'imagerie médicale qui utilise les rayons X et un système informatique pour reconstruire des images en coupes fines du corps humain. Plus précis qu'une radiographie standard, il permet une analyse détaillée des organes, des vaisseaux et des structures anatomiques.</p>
+                
+                <div class="key-points">
+                    <div class="point">
+                        <i class="fas fa-clock"></i>
+                        <p><strong>Durée :</strong> 5 à 20 minutes selon la zone examinée</p>
+                    </div>
+                    <div class="point">
+                        <i class="fas fa-radiation"></i>
+                        <p><strong>Radiation :</strong> Oui (dose plus élevée qu'une radiographie standard)</p>
+                    </div>
+                    <div class="point">
+                        <i class="fas fa-syringe"></i>
+                        <p><strong>Produit de contraste :</strong> Souvent utilisé (injection intraveineuse)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="exam-steps">
+            <h2>Déroulement de l'examen</h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Préparation</h3>
+                    <p>On vous demandera de retirer les objets métalliques. Pour un scanner abdominal, un jeûne de 4 heures est généralement nécessaire. Si un produit de contraste est prévu, une prise de sang récente (créatininémie) peut être demandée.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Installation</h3>
+                    <p>Allongé sur une table qui se déplace dans un large anneau. Des coussins peuvent être placés pour maintenir la position. Le personnel se place derrière une vitre protectrice mais vous entend et vous voit.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Acquisition des images</h3>
+                    <p>La table se déplace lentement pendant que l'anneau tourne autour de vous. Des consignes de respiration ("Bloquez la respiration") seront données par l'interphone. L'examen est indolore mais bruyant (cliquetis).</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Injection de contraste (si nécessaire)</h3>
+                    <p>Un produit iodé peut être injecté pour mieux visualiser les vaisseaux et certains organes. Vous ressentirez une sensation de chaleur diffuse et un goût métallique pendant quelques secondes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="patient-experience">
+            <h2>Ce que ressent le patient</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <i class="fas fa-temperature-high"></i>
+                    <h3>Sensation de chaleur</h3>
+                    <p>Si injection de produit de contraste, sensation de chaleur généralisée pendant 30 secondes</p>
+                </div>
+                <div class="experience-card">
+                    <i class="fas fa-volume-up"></i>
+                    <h3>Bruit</h3>
+                    <p>Bruits mécaniques de cliquetis pendant l'acquisition</p>
+                </div>
+                <div class="experience-card">
+                    <i class="fas fa-procedures"></i>
+                    <h3>Confort</h3>
+                    <p>Anneau large (moins anxiogène que l'IRM), table parfois dure</p>
+                </div>
+                <div class="experience-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>Goût métallique</h3>
+                    <p>Goût bizarre pendant l'injection (normal et transitoire)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="preparation">
+            <h2>Préparation spécifique</h2>
+            <div class="preparation-content">
+                <div class="preparation-list">
+                    <h3>Avant l'examen</h3>
+                    <ul>
+                        <li>Être à jeun 4h pour un scanner abdominal</li>
+                        <li>Apporter vos anciens examens d'imagerie</li>
+                        <li>Signaler allergies, asthme ou problèmes rénaux</li>
+                        <li>Prévenir si diabétique (prise de metformine)</li>
+                    </ul>
+                </div>
+                <div class="preparation-list">
+                    <h3>Après l'examen</h3>
+                    <ul>
+                        <li>Boire abondamment (1,5L d'eau) si injection de contraste</li>
+                        <li>Surveillance 30 min en cas d'antécédent allergique</li>
+                        <li>Résultats disponibles sous 24-48h</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="indications">
+            <h2>Indications principales</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Urgences cérébrales</h3>
+                    <p>AVC, traumatisme crânien, hémorragie</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-lungs"></i>
+                    <h3>Pathologies thoraciques</h3>
+                    <p>Embolie pulmonaire, pneumopathie, cancer</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-bone"></i>
+                    <h3>Traumatologie</h3>
+                    <p>Fractures complexes, lésions articulaires</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-search"></i>
+                    <h3>Bilan oncologique</h3>
+                    <p>Recherche de métastases, suivi de tumeurs</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="risks">
+            <h2>Risques et contre-indications</h2>
+            <div class="alert-card warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Allergie au produit de contraste</h3>
+                <p>Rare mais possible (réaction cutanée, œdème). Prévenez l'équipe si antécédents.</p>
+            </div>
+            <div class="alert-card info">
+                <i class="fas fa-baby"></i>
+                <h3>Grossesse</h3>
+                <p>Contre-indication relative. À signaler absolument avant l'examen.</p>
+            </div>
+            <div class="alert-card danger">
+                <i class="fas fa-kidneys"></i>
+                <h3>Insuffisance rénale</h3>
+                <p>Risque de néphropathie induite par le produit de contraste. Bilan requis.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Imagerie Médicale Simplifiée - Tous droits réservés</p>
+            <p>Ce site a pour but d'informer et ne remplace pas un avis médical professionnel.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

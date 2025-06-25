@@ -15,15 +15,45 @@
         </div>
     </header>
 
-    <nav>
-        <!-- Même navigation que index.html -->
+  <nav>
+        <div class="container">
+            <ul>
+                <li><a href="../index.html" ><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="../notions.html"><i class="fas fa-book"></i> Notions de base</a></li>
+                
+                <!-- Menu déroulant Examens -->
+                <li class="dropdown">
+                    <a href="#"><i class="fas fa-procedures"></i> Examens <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./irm.html" class="active">IRM</a></li>
+                        <li><a href="./scanner.html">Scanner</a></li>
+                        <li><a href="examens/radiographie.html">Radiographie</a></li>
+                        <li><a href="examens/echographie.html">Échographie</a></li>
+                        <li><a href="examens/mammographie.html">Mammographie</a></li>
+                        <li><a href="examens/scintigraphie.html">Scintigraphie</a></li>
+                        <li><a href="examens/fibroscopie.html">Fibroscopie</a></li>
+                        <li><a href="examens/eeg.html">EEG</a></li>
+                        <li><a href="examens/ecg.html">ECG</a></li>
+                        <li><a href="examens/autre.html">Autres examens</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="../equipe.html"><i class="fas fa-user-md"></i> Équipe médicale</a></li>
+                <li><a href="../parcours.html"><i class="fas fa-user"></i> Parcours patient</a></li>
+                <li><a href="../ressources.html"><i class="fas fa-file-pdf"></i> Ressources</a></li>
+                <li><a href="../glossaire.html"><i class="fas fa-book-open"></i> Glossaire</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </nav>
 
     <main class="container">
         <section class="exam-overview">
             <div class="exam-image">
-                <img src="../../assets/images/irm-appareil.jpg" alt="Appareil d'IRM">
-                <p class="caption">Appareil d'IRM - Le patient est allongé dans un tunnel</p>
+                <img src="../../assets/images/irm.jpg" alt="Appareil d'IRM">
+                
             </div>
             <div class="exam-description">
                 <h2>Qu'est-ce qu'une IRM ?</h2>
@@ -105,6 +135,14 @@
                         <li>Pour une IRM abdominale : être à jeun 4h avant</li>
                     </ul>
                 </div>
+                 <div class="preparation-list">
+                    <h3>Pendant l'examen</h3>
+                    <ul>
+                        <li>Allongé dans un tunnel étroit
+                        <li>Bruits forts (casque ou bouchons fournis)</li>
+                        <li>Ne pas bouger du tout</li>
+                    </ul>
+                </div>
                 <div class="preparation-list">
                     <h3>Après l'examen</h3>
                     <ul>
@@ -115,10 +153,42 @@
                 </div>
             </div>
         </section>
+        <section class="fiches-techniques">
+            <h2>Fiches techniques détaillées</h2>
+            
+            <div class="fiche">
+                <h3>IRM</h3>
+                <div class="fiche-content">
+                    <div class="fiche-image">
+                        <img src="../assets/images/irmp.jpg" alt="Principe IRM">
+                    </div>
+                    <div class="fiche-text">
+                        <h4>Principe</h4>
+                        <p>L'IRM utilise les propriétés magnétiques des atomes d'hydrogène dans l'eau de notre corps. Un champ magnétique puissant aligne ces atomes, puis des ondes radio les perturbent. Lorsqu'ils retournent à leur position initiale, ils émettent un signal détecté par l'appareil.</p>
+                        
+                        <h4>Indications</h4>
+                        <ul>
+                            <li>Pathologies cérébrales (AVC, tumeurs)</li>
+                            <li>Lésions de la moelle épinière</li>
+                            <li>Étude des articulations et des ligaments</li>
+                        </ul>
+                        
+                        <h4>Risques</h4>
+                        <p>Pas de radiation ionisante. Contre-indiqué en cas de pacemaker ou certains implants métalliques.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ajouter les autres fiches de la même manière -->
+        </section>
     </main>
 
     <footer>
         <!-- Même footer que index.html -->
+         <div class="container">
+            <p>&copy; 2025 Rakotondranivo Radoniaina Flavien - Tous droits réservés</p>
+            <p>Ce site a pour but d'informer et ne remplace pas un avis médical professionnel.</p>
+        </div>
     </footer>
 
     <script src="../../js/script.js"></script>

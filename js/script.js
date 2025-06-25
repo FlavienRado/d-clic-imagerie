@@ -33,6 +33,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+
+    document.querySelectorAll('.dropdown > a').forEach(item => {
+        item.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                this.parentElement.classList.toggle('active');
+            }
+        });
+    });
+
     // Recherche dans le glossaire
     const searchInput = document.getElementById('glossary-search');
     if (searchInput) {
