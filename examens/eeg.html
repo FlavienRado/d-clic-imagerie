@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEG - Imagerie Médicale Simplifiée</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="../../assets/images/logo.png" alt="Logo Imagerie Médicale Simplifiée" class="logo">
+            </div>
+            <div class="header-text">
+                <h1>L'Électroencéphalogramme (EEG)</h1>
+                <p>Enregistrement de l'activité électrique cérébrale</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="../../index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="../../notions.html"><i class="fas fa-book"></i> Notions de base</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fas fa-procedures"></i> Examens <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="irm.html">IRM</a></li>
+                        <li><a href="scanner.html">Scanner</a></li>
+                        <li><a href="radiographie.html">Radiographie</a></li>
+                        <li><a href="echographie.html">Échographie</a></li>
+                        <li><a href="mammographie.html">Mammographie</a></li>
+                        <li><a href="scintigraphie.html">Scintigraphie</a></li>
+                        <li><a href="fibroscopie.html">Fibroscopie</a></li>
+                        <li><a href="ecg.html">ECG</a></li>
+                        <li><a class="active" href="eeg.html">EEG</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../equipe.html"><i class="fas fa-user-md"></i> Équipe médicale</a></li>
+                <li><a href="../../parcours.html"><i class="fas fa-user"></i> Parcours patient</a></li>
+                <li><a href="../../ressources.html"><i class="fas fa-file-pdf"></i> Ressources</a></li>
+                <li><a href="../../glossaire.html"><i class="fas fa-book-open"></i> Glossaire</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="exam-overview">
+            <div class="exam-image">
+                <img src="../../assets/images/eeg-appareil.jpg" alt="Appareil d'EEG">
+                <p class="caption">Appareil d'électroencéphalographie avec casque d'électrodes</p>
+            </div>
+            <div class="exam-description">
+                <h2>Qu'est-ce qu'un EEG ?</h2>
+                <p>L'électroencéphalogramme (EEG) est un examen qui mesure l'activité électrique du cerveau à l'aide d'électrodes placées sur le cuir chevelu. Indolore et sans danger, il permet d'étudier le fonctionnement cérébral et de détecter d'éventuelles anomalies.</p>
+                
+                <div class="key-points">
+                    <div class="point">
+                        <i class="fas fa-clock"></i>
+                        <p><strong>Durée :</strong> 20 min à 1h (standard)</p>
+                    </div>
+                    <div class="point">
+                        <i class="fas fa-radiation"></i>
+                        <p><strong>Radiation :</strong> Aucune</p>
+                    </div>
+                    <div class="point">
+                        <i class="fas fa-bed"></i>
+                        <p><strong>Variantes :</strong> EEG de sommeil/nuit</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="eeg-waves">
+            <h2>Les ondes cérébrales</h2>
+            <p>L'EEG enregistre différents types d'ondes selon l'état de vigilance :</p>
+            
+            <div class="wave-types">
+                <div class="wave-card">
+                    <h3>Ondes alpha</h3>
+                    <p>8-13 Hz - État de relaxation yeux fermés</p>
+                </div>
+                
+                <div class="wave-card">
+                    <h3>Ondes bêta</h3>
+                    <p>13-30 Hz - Éveil actif, concentration</p>
+                </div>
+                
+                <div class="wave-card">
+                    <h3>Ondes thêta</h3>
+                    <p>4-7 Hz - Somnolence, méditation profonde</p>
+                </div>
+                
+                <div class="wave-card">
+                    <h3>Ondes delta</h3>
+                    <p>0.5-4 Hz - Sommeil profond</p>
+                </div>
+            </div>
+            
+            <img src="../../assets/images/eeg-ondes.jpg" alt="Ondes cérébrales EEG" style="width:100%; max-width:600px; display:block; margin:1rem auto; border-radius:8px;">
+        </section>
+
+        <section class="procedure">
+            <h2>Déroulement de l'examen</h2>
+            <div class="procedure-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Installation</h3>
+                        <p>Assis ou allongé dans un fauteuil confortable. Un technicien place délicatement 20 à 30 électrodes sur votre cuir chevelu à l'aide d'une pâte conductrice.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Enregistrement</h3>
+                        <p>Pendant l'examen, on vous demandera de :
+                            <ul>
+                                <li>Garder les yeux fermés/ouverts</li>
+                                <li>Respirer profondément (hyperpnée)</li>
+                                <li>Regarder un stroboscope (stimulation lumineuse)</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Fin de l'examen</h3>
+                        <p>Les électrodes sont retirées et la pâte conductrice est nettoyée. Vos cheveux pourront être légèrement collants (prévoir un shampooing à domicile).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="preparation">
+            <h2>Préparation spécifique</h2>
+            <div class="preparation-steps">
+                <div class="prep-step">
+                    <h3>La veille</h3>
+                    <p>Lavez vos cheveux sans après-shampooing ni produit coiffant. Évitez café, thé et boissons énergisantes 12h avant.</p>
+                </div>
+                
+                <div class="prep-step">
+                    <h3>Le jour J</h3>
+                    <p>Prenez un repas normal (sauf indication contraire). Apportez la liste de vos médicaments. Prévoyez un shampooing pour après l'examen.</p>
+                </div>
+                
+                <div class="prep-step">
+                    <h3>Pour les enfants</h3>
+                    <p>Privilégiez un moment où ils sont calmes (après une sieste). Un jeu ou livre peut les aider à rester immobiles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="activation">
+            <h2>Méthodes d'activation</h2>
+            <p>Pour augmenter les chances de détecter des anomalies :</p>
+            
+            <div class="activation-methods">
+                <div class="method-card">
+                    <h3><i class="fas fa-wind"></i> Hyperpnée</h3>
+                    <p>Respiration profonde et rapide pendant 3-5 minutes pour provoquer une alcalose</p>
+                </div>
+                
+                <div class="method-card">
+                    <h3><i class="fas fa-lightbulb"></i> Stimulation lumineuse</h3>
+                    <p>Flashs lumineux à différentes fréquences (photic stimulation)</p>
+                </div>
+                
+                <div class="method-card">
+                    <h3><i class="fas fa-bed"></i> Privation de sommeil</h3>
+                    <p>Dormir moins avant l'examen pour augmenter l'activité épileptique</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="indications">
+            <h2>Principales indications</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Épilepsie</h3>
+                    <ul>
+                        <li>Diagnostic</li>
+                        <li>Classification des crises</li>
+                        <li>Suivi thérapeutique</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Troubles du sommeil</h3>
+                    <ul>
+                        <li>Narcolepsie</li>
+                        <li>Apnée du sommeil</li>
+                        <li>Parasomnies</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <i class="fas fa-head-side-virus"></i>
+                    <h3>Pathologies cérébrales</h3>
+                    <ul>
+                        <li>Encéphalopathies</li>
+                        <li>Encéphalites</li>
+                        <li>Comas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="variants">
+            <h2>Variantes d'EEG</h2>
+            <div class="variants-container">
+                <div class="variant-card">
+                    <h3><i class="fas fa-clock"></i> EEG standard</h3>
+                    <p>20-30 minutes en cabinet, conditions de base</p>
+                </div>
+                
+                <div class="variant-card">
+                    <h3><i class="fas fa-moon"></i> EEG de sommeil</h3>
+                    <p>Enregistrement pendant l'endormissement et le sommeil</p>
+                </div>
+                
+                <div class="variant-card">
+                    <h3><i class="fas fa-video"></i> EEG-vidéo</h3>
+                    <p>Enregistrement prolongé (jours) avec surveillance vidéo</p>
+                </div>
+                
+                <div class="variant-card">
+                    <h3><i class="fas fa-home"></i> EEG ambulatoire</h3>
+                    <p>Enregistrement à domicile avec appareil portable</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="results">
+            <h2>Comprendre les résultats</h2>
+            <div class="results-content">
+                <div class="result-card">
+                    <h3><i class="fas fa-check-circle"></i> Normal</h3>
+                    <p>Ondes régulières et symétriques correspondant à l'état de vigilance</p>
+                </div>
+                
+                <div class="result-card">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Anomalies</h3>
+                    <p>Peuvent inclure : pointes, ondes lentes, asymétries, etc. Nécessitent une interprétation spécialisée.</p>
+                </div>
+                
+                <p style="margin-top:1rem;"><strong>Note :</strong> Un EEG normal n'exclut pas toujours une pathologie. Votre neurologue intégrera ce résultat avec l'ensemble de votre tableau clinique.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Imagerie Médicale Simplifiée - Tous droits réservés</p>
+            <p>Ce site a pour but d'informer et ne remplace pas un avis médical professionnel.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

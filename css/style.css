@@ -1027,6 +1027,738 @@ tr:hover {
     color: var(--secondary-color);
 }
 
+/* Styles spécifiques scintigraphie */
+.safety-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.safety-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.safety-card i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.procedure-step h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Préparation */
+.preparation-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.preparation-list {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* Alertes */
+.alert-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.alert-card.info {
+    background-color: #e7f5ff;
+    border-left: 4px solid #0d6efd;
+}
+
+.alert-card i {
+    font-size: 1.5rem;
+    color: #0d6efd;
+}
+
+  /* Styles spécifiques scintigraphie */
+        .tracer-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .radioactivity-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: #fff8e6;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .procedure-steps {
+            counter-reset: step-counter;
+        }
+        
+        .procedure-step {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .procedure-step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: var(--secondary-color);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+/* Styles spécifiques fibroscopie */
+.procedure-steps {
+    margin-top: 1.5rem;
+}
+
+.step {
+    display: flex;
+    margin-bottom: 1.5rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+}
+
+.preparation-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.preparation-list {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.preparation-list h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+ /* Styles spécifiques fibroscopie */
+        .types-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .type-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--secondary-color);
+        }
+        
+        .comfort-measures {
+            background: #f0f8ff;
+            border-left: 4px solid #4682b4;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .anesthesia-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .anesthesia-option {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+/* Styles spécifiques ECG */
+.variants-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.variant-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.variant-card h3 {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.variant-card h3 i {
+    color: var(--secondary-color);
+}
+
+.wave-explanation ul {
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.wave-explanation li {
+    margin-bottom: 0.5rem;
+}
+
+/* Préparation */
+.preparation-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.preparation-list {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* Styles spécifiques ECG */
+        .ecg-wave {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ecg-graph {
+            width: 100%;
+            height: 150px;
+            background: #f5f5f5;
+            margin: 1rem 0;
+            position: relative;
+            border-left: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .ecg-line {
+            position: absolute;
+            height: 2px;
+            background: #333;
+            animation: ecg 3s linear infinite;
+        }
+        
+        @keyframes ecg {
+            0% { width: 0; left: 0; }
+            20% { width: 20%; }
+            30% { width: 5%; height: 2px; }
+            35% { width: 5%; height: 50px; top: -25px; }
+            40% { width: 5%; height: 2px; top: 0; }
+            100% { width: 100%; left: 0; }
+        }
+        
+        .electrode-positions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .electrode-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .electrode-card i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+/* Styles spécifiques EEG */
+.variants-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.variant-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.variant-card h3 {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.variant-card h3 i {
+    color: var(--secondary-color);
+}
+
+.results-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-top: 1rem;
+}
+
+.result-card {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.result-card:last-child {
+    border-bottom: none;
+}
+
+.result-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+}
+
+.result-card h3 i {
+    font-size: 1.2rem;
+}
+
+ /* Styles spécifiques EEG */
+        .eeg-waves {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin: 2rem 0;
+        }
+        
+        .wave-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .wave-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .preparation-steps {
+            counter-reset: prep-counter;
+        }
+        
+        .prep-step {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .prep-step::before {
+            counter-increment: prep-counter;
+            content: counter(prep-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: var(--secondary-color);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .activation-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .method-card {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+/* Styles spécifiques radioprotection */
+.alert-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    align-items: flex-start;
+}
+
+.alert-card i {
+    font-size: 1.5rem;
+    margin-top: 0.3rem;
+}
+
+.alert-card.info {
+    background-color: #e7f5ff;
+    border-left: 4px solid #0d6efd;
+}
+
+.alert-card.warning {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+}
+
+.alert-card.warning i {
+    color: #e67e22;
+}
+
+ /* Styles spécifiques radioprotection */
+        .principle-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .dose-comparison {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .dose-comparison th, .dose-comparison td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .dose-comparison th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .dose-comparison tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .protection-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .method-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .method-card h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .pregnancy-protocol {
+            background: #fff8e6;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #e67e22;
+            margin: 1.5rem 0;
+        }
+
+/* Styles spécifiques radiologie dentaire */
+.technique-content {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.technique-image {
+    flex: 1;
+}
+
+.technique-description {
+    flex: 2;
+}
+
+.emerging-tech {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.tech-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.tech-card h3 {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.alert-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    align-items: flex-start;
+}
+
+.alert-card.info {
+    background-color: #e7f5ff;
+    border-left: 4px solid #0d6efd;
+}
+
+.alert-card i {
+    font-size: 1.5rem;
+    margin-top: 0.3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .technique-content {
+        flex-direction: column;
+    }
+    
+    .technique-image {
+        margin-bottom: 1rem;
+    }
+    
+    .comparaison-table {
+        font-size: 0.9rem;
+    }
+    
+    .comparaison-table th, 
+    .comparaison-table td {
+        padding: 8px 10px;
+    }
+}
+
+ /* Styles spécifiques radiologie dentaire */
+        .technique-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--secondary-color);
+        }
+        
+        .comparaison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparaison-table th, .comparaison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparaison-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .comparaison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .indications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .indication-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .indication-card h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .protection-protocol {
+            background: #f0f8ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #4682b4;
+            margin: 1.5rem 0;
+        }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dose-comparison {
+        font-size: 0.9rem;
+    }
+    
+    .dose-comparison th, 
+    .dose-comparison td {
+        padding: 8px 10px;
+    }
+    
+    .protection-methods {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .wave-types {
+        grid-template-columns: 1fr;
+    }
+    
+    .activation-methods {
+        flex-direction: column;
+    }
+    
+    .method-card {
+        min-width: 100%;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ecg-graph {
+        height: 100px;
+    }
+    
+    .variant-card {
+        text-align: center;
+    }
+    
+    .variant-card h3 {
+        justify-content: center;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .step {
+        flex-direction: column;
+    }
+    
+    .step-number {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .anesthesia-options {
+        flex-direction: column;
+    }
+}        
+
+/* Responsive */
+@media (max-width: 768px) {
+    .radioactivity-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .procedure-step {
+        padding-left: 2.5rem;
+    }
+}
+
+
+
 /* Ressources */
 .resources {
     display: grid;
