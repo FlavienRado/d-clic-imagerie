@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Équipe Médicale - Imagerie Médicale Simplifiée</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -17,6 +17,32 @@
 
     <nav>
         <!-- Même navigation que index.html -->
+        <div class="container">
+            <ul>
+                <li><a href="index.html" ><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="notions.html"><i class="fas fa-book"></i> Notions de base</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fas fa-procedures"></i> Examens <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="examens/irm.html">IRM</a></li>
+                        <li><a href="examens/scanner.html">Scanner</a></li>
+                        <li><a href="examens/radiographie.html">Radiographie</a></li>
+                        <li><a href="examens/radiodentaire.html">Radiodentaire</a></li>
+                        <li><a href="examens/mammographie.html">Mammographie</a></li>
+                        <li><a href="examens/echographie.html">Échographie</a></li>
+                        <li><a href="examens/scintigraphie.html">Scintigraphie</a></li>
+                        <li><a href="examens/fibroscopie.html">Fibroscopie</a></li>
+                        <li><a href="examens/eeg.html">EEG</a></li>
+                        <li><a href="examens/ecg.html">ECG</a></li>
+                    </ul>
+                </li>
+                <li><a href="equipe.html" class="active"><i class="fas fa-user-md"></i> Équipe médicale</a></li>
+                <li><a href="parcours.html"><i class="fas fa-user"></i> Parcours patient</a></li>
+                <li><a href="radioprotection.html"><i class="fas fa-shield-alt"></i> Radioprotection</a></li>
+                <li><a href="ressources.html"><i class="fas fa-file-pdf"></i> Ressources</a></li>
+                <li><a href="glossaire.html"><i class="fas fa-book-open"></i> Glossaire</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
     </nav>
 
     <main class="container">
@@ -28,7 +54,7 @@
         <section class="team-members">
             <article class="team-card">
                 <div class="team-image">
-                    <img src="../assets/images/manipulateur-radio.jpg" alt="Manipulateur radio">
+                    <img src="assets/images/manip.png" alt="Manipulateur radio">
                 </div>
                 <div class="team-content">
                     <h3>Le manipulateur en électroradiologie médicale (MERM)</h3>
@@ -49,7 +75,7 @@
 
             <article class="team-card">
                 <div class="team-image">
-                    <img src="../assets/images/radiologue.jpg" alt="Radiologue">
+                    <img src="assets/images/radiologue.jpg" alt="Radiologue">
                 </div>
                 <div class="team-content">
                     <h3>Le radiologue</h3>
@@ -70,7 +96,7 @@
 
             <article class="team-card">
                 <div class="team-image">
-                    <img src="../assets/images/infirmier-imagerie.jpg" alt="Infirmier en imagerie">
+                    <img src="assets/images/infirmier.jpg" alt="Infirmier en imagerie">
                 </div>
                 <div class="team-content">
                     <h3>L'infirmier(e) en imagerie</h3>
@@ -93,17 +119,15 @@
         <section class="team-collaboration">
             <h2>Un travail d'équipe</h2>
             <p>Tous ces professionnels collaborent pour vous offrir des soins de qualité. Ils respectent strictement les règles d'hygiène et de radioprotection.</p>
-            <div class="collaboration-image">
-                <img src="../assets/images/equipe-imagerie.jpg" alt="Équipe en imagerie médicale">
-                <p class="caption">Une équipe pluridisciplinaire au service des patients</p>
-            </div>
         </section>
     </main>
 
     <footer>
         <!-- Même footer que index.html -->
+        <p>&copy; 2025 Rakotondranivo Radoniaina Flavien - Tous droits réservés</p>
+        <p>Ce site a pour but d'informer et ne remplace pas un avis médical professionnel.</p>
     </footer>
 
-    <script src="../js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
