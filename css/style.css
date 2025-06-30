@@ -59,6 +59,18 @@ header p {
     opacity: 0.9;
 }
 
+.header-flex {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-right: 50px;
+}
+
 /* Navigation */
 nav {
     background-color: white;
@@ -1598,6 +1610,18 @@ tr:hover {
     .comparaison-table th, 
     .comparaison-table td {
         padding: 8px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        text-align: left;
+    }
+    .logo {
+        width: 200px; 
     }
 }
 
