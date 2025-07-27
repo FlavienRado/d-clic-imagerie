@@ -1960,3 +1960,8 @@ tr:hover {
         gap: 1.5rem;
     }
 }
+
+.link_perso{
+    color: #ddd;
+    text-decoration: none;
+}
