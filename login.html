@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Connexion - Déclic Imagerie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+    <header class="fb-header">
+        <div class="container">
+            <h1>Déclic Imagerie</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="login-box" aria-labelledby="login-title">
+            <h2 id="login-title">Se connecter</h2>
+
+            <form id="loginForm" novalidate>
+                <input id="username" name="username" type="text" placeholder="Nom Utilisateur" required>
+                <input id="password" name="password" type="password" placeholder="Mot de passe" required>
+                <button id="submitBtn" type="submit" class="fb-btn">Se connecter</button>
+                <p id="loginError" class="login-error" aria-live="polite" style="display:none;">Identifiants incorrects</p>
+            </form>
+
+            <div class="login-actions">
+                 <a href="../index.html"><button id="backBtn" class="back-btn"></button>Retour </button></a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script>
+    (function(){
+        const form = document.getElementById('loginForm');
+        const err = document.getElementById('loginError');
+        const backBtn = document.getElementById('backBtn');
+
+        function getQueryParam(name){
+            const params = new URLSearchParams(location.search);
+            return params.get(name);
+        }
+
+        // Back button: retourne vers returnUrl si fourni, sinon vers index.html ou history.back()
+        backBtn.addEventListener('click', function(){
+            const returnUrl = getQueryParam('returnUrl');
+            if(returnUrl){
+                // returnUrl was encoded by protect(); decode
+                location.href = decodeURIComponent(returnUrl);
+            } else if(history.length > 1){
+                history.back();
+            } else {
+                location.href = 'index.html';
+            }
+        });
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            const u = document.getElementById('username').value.trim();
+            const p = document.getElementById('password').value;
+            // attemptLogin is defined in js/auth.js (demo). It redirects on success.
+            const ok = window.attemptLogin ? window.attemptLogin(u, p) : false;
+            if(!ok){
+                err.style.display = 'block';
+            }
+        });
+    })();
+    </script>
+</body>
+</html>
