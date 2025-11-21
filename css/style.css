@@ -80,6 +80,14 @@ nav {
     z-index: 100;
 }
 
+nav .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -108,11 +116,88 @@ nav ul li a:hover, nav ul li a.active {
     color: white;
 }
 
+/* mobile button */
 .mobile-menu-btn {
-    display: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    text-align: center;
+    display: none; /* desktop hides it */
+}
+
+/* Mobile specific */
+@media (max-width: 800px) {
+    /* show toggle button */
+    .mobile-menu-btn {
+        display: block;
+        font-size: 1.25rem;
+        color: var(--dark-color);
+        background: transparent;
+        border: none;
+        padding: 8px;
+    }
+
+    /* hide desktop ul, will be shown when .nav-open on body */
+    nav .container ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 8px;
+        right: 8px;
+        background: white;
+        padding: 12px;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        z-index: 200;
+        max-height: calc(100vh - 120px);
+        overflow: auto;
+        gap: 6px;
+        align-items: stretch;
+    }
+
+    /* visible when menu opened */
+    body.nav-open nav .container ul {
+        display: flex;
+    }
+
+    /* links full width on mobile */
+    nav ul li a {
+        padding: 12px 14px;
+        margin: 4px 0;
+        border-radius: 6px;
+    }
+
+    /* dropdown behavior on mobile: submenu becomes static block */
+    .dropdown .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: transparent;
+        padding-left: 12px;
+        display: none; /* shown when parent has .open */
+    }
+
+    .dropdown.open > .dropdown-menu {
+        display: block;
+        background: white;
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        margin-top: 8px;
+        padding: 8px 0;
+    }
+
+    .dropdown.open > a {
+        background: rgba(0,0,0,0.04);
+    }
+
+    .dropdown-menu a {
+        padding: 8px 16px;
+        margin: 0;
+        border-radius: 4px;
+    }
+
+    /* make sure dropdown arrows / caret are visible */
+    .dropdown > a::after {
+        content: "▾";
+        margin-left: 8px;
+        font-size: 0.8rem;
+    }
 }
 
 /* Contenu principal */
@@ -1097,7 +1182,7 @@ tr:hover {
 
 .alert-card i {
     font-size: 1.5rem;
-    color: #0d6efd;
+    margin-top: 0.3rem;
 }
 
   /* Styles spécifiques scintigraphie */
@@ -1194,7 +1279,7 @@ tr:hover {
     margin-bottom: 1rem;
 }
 
- /* Styles spécifiques fibroscopie */
+/* Styles spécifiques fibroscopie */
         .types-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
