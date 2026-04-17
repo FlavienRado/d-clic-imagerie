@@ -5,49 +5,322 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Connexion - Déclic Imagerie</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .auth-container {
+            max-width: 450px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .auth-tabs {
+            display: flex;
+            background-color: #f8f9fa;
+            margin: 0;
+        }
+
+        .auth-tab {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            border: none;
+            background: #f8f9fa;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+
+        .auth-tab.active {
+            background-color: white;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .auth-tab:hover:not(.active) {
+            background-color: #e9ecef;
+        }
+
+        .auth-form {
+            padding: 30px;
+            display: none;
+        }
+
+        .auth-form.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .form-group input.error {
+            border-color: #e74c3c;
+        }
+
+        .form-error {
+            color: #e74c3c;
+            font-size: 13px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .form-error.show {
+            display: block;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-submit:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #95a5a6;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #7f8c8d;
+        }
+
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .info-text {
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .password-requirements {
+            font-size: 13px;
+            color: #666;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .requirement {
+            margin: 5px 0;
+        }
+
+        .requirement.met {
+            color: #27ae60;
+        }
+
+        .requirement::before {
+            content: "✗ ";
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .requirement.met::before {
+            content: "✓ ";
+        }
+    </style>
 </head>
 <body class="login-page">
     <header class="fb-header">
         <div class="container">
             <img src="assets/images/logo.png" alt="Logo Déclic Imagerie" class="logo">
-            
         </div>
     </header>
 
     <main class="container">
-        <section class="login-box" aria-labelledby="login-title">
-            <h2 id="login-title">Se connecter</h2>
+        <a href="index.html" class="btn-back">← Retour</a>
 
-            <form id="loginForm" novalidate>
-                <input id="username" name="username" type="text" placeholder="Nom Utilisateur" required>
-                <input id="password" name="password" type="password" placeholder="Mot de passe" required>
-                <button id="submitBtn" type="submit" class="fb-btn">Se connecter</button>
-                <p id="loginError" class="login-error" aria-live="polite" style="display:none;">Identifiants incorrects</p>
+        <div class="auth-container">
+            <!-- Tabs -->
+            <div class="auth-tabs">
+                <button class="auth-tab active" id="login-tab" data-tab="login">Connexion</button>
+                <button class="auth-tab" id="register-tab" data-tab="register">S'enregistrer</button>
+            </div>
+
+            <!-- Login Form -->
+            <form class="auth-form active" id="login-form" data-form="login">
+                <h2>Connexion</h2>
+                <p style="text-align: center; color: #666; margin-bottom: 20px; font-size: 14px;">
+                    Connectez-vous pour accéder au contenu protégé
+                </p>
+
+                <div class="success-message" id="login-success">
+                    ✓ Connexion réussie. Redirection...
+                </div>
+
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input 
+                        type="email" 
+                        id="login-email" 
+                        name="email" 
+                        placeholder="votre.email@exemple.com"
+                        required
+                    >
+                    <div class="form-error" id="login-email-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Mot de passe</label>
+                    <input 
+                        type="password" 
+                        id="login-password" 
+                        name="password" 
+                        placeholder="••••••••"
+                        required
+                    >
+                    <div class="form-error" id="login-password-error"></div>
+                </div>
+
+                <button type="submit" class="btn-submit" id="login-btn">Se connecter</button>
+
+                <p class="info-text">
+                    Pas de compte ? <a href="#" onclick="document.getElementById('register-tab').click(); return false;" style="color: #3498db; text-decoration: none;">S'enregistrer</a>
+                </p>
             </form>
 
-            <div class="login-actions">
-                 <a href="index.html"><button id="backBtn" class="back-btn"></button>Retour </button></a>
-            </div>
-        </section>
+            <!-- Register Form -->
+            <form class="auth-form" id="register-form" data-form="register">
+                <h2>Créer un compte</h2>
+                <p style="text-align: center; color: #666; margin-bottom: 20px; font-size: 14px;">
+                    Créez un compte pour accéder au contenu protégé
+                </p>
+
+                <div class="success-message" id="register-success">
+                    ✓ Enregistrement réussi. Connexion...
+                </div>
+
+                <div class="form-group">
+                    <label for="register-name">Nom complet</label>
+                    <input 
+                        type="text" 
+                        id="register-name" 
+                        name="name" 
+                        placeholder="Jean Dupont"
+                        required
+                    >
+                    <div class="form-error" id="register-name-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input 
+                        type="email" 
+                        id="register-email" 
+                        name="email" 
+                        placeholder="votre.email@exemple.com"
+                        required
+                    >
+                    <div class="form-error" id="register-email-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="register-password">Mot de passe</label>
+                    <input 
+                        type="password" 
+                        id="register-password" 
+                        name="password" 
+                        placeholder="••••••••"
+                        required
+                    >
+                    <div class="form-error" id="register-password-error"></div>
+                    <div class="password-requirements">
+                        <div class="requirement" id="req-length">Au moins 8 caractères</div>
+                        <div class="requirement" id="req-upper">Au moins une lettre majuscule</div>
+                        <div class="requirement" id="req-lower">Au moins une lettre minuscule</div>
+                        <div class="requirement" id="req-number">Au moins un chiffre</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="register-password-confirm">Confirmer le mot de passe</label>
+                    <input 
+                        type="password" 
+                        id="register-password-confirm" 
+                        name="password_confirm" 
+                        placeholder="••••••••"
+                        required
+                    >
+                    <div class="form-error" id="register-password-confirm-error"></div>
+                </div>
+
+                <button type="submit" class="btn-submit" id="register-btn">S'enregistrer</button>
+
+                <p class="info-text">
+                    Vous avez déjà un compte ? <a href="#" onclick="document.getElementById('login-tab').click(); return false;" style="color: #3498db; text-decoration: none;">Se connecter</a>
+                </p>
+            </form>
+        </div>
     </main>
 
     <script src="js/auth.js"></script>
-    <script>
-    (function(){
-        const form = document.getElementById('loginForm');
-        const err = document.getElementById('loginError');
-        const backBtn = document.getElementById('backBtn');
-
-        function getQueryParam(name){
-            const params = new URLSearchParams(location.search);
-            return params.get(name);
-        }
-
-        // Back button: retourne vers returnUrl si fourni, sinon vers index.html ou history.back()
-        backBtn.addEventListener('click', function(){
             const returnUrl = getQueryParam('returnUrl');
             if(returnUrl){
-                // returnUrl was encoded by protect(); decode
                 location.href = decodeURIComponent(returnUrl);
             } else if(history.length > 1){
                 history.back();
@@ -55,15 +328,17 @@
                 location.href = 'index.html';
             }
         });
-
-        form.addEventListener('submit', function(e){
-            e.preventDefault();
-            const u = document.getElementById('username').value.trim();
-            const p = document.getElementById('password').value;
-            // attemptLogin is defined in js/auth.js (demo). It redirects on success.
-            const ok = window.attemptLogin ? window.attemptLogin(u, p) : false;
-            if(!ok){
-                err.style.display = 'block';
+    })();
+    </script>
+</body>
+</html>
+            const returnUrl = getQueryParam('returnUrl');
+            if(returnUrl){
+                location.href = decodeURIComponent(returnUrl);
+            } else if(history.length > 1){
+                history.back();
+            } else {
+                location.href = 'index.html';
             }
         });
     })();

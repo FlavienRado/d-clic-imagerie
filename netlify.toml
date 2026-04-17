@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+  command = ""
+
+# Netlify Identity configuration
+[context.production.environment]
+  NETLIFY_AUTH_ENABLED = "true"
+

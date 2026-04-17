@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mon Profil - Déclic Imagerie</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .profile-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 20px;
+        }
+
+        .profile-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+
+        .profile-header h1 {
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+
+        .profile-info {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #555;
+            min-width: 130px;
+        }
+
+        .info-value {
+            color: #333;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            flex: 1;
+            min-width: 150px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-secondary {
+            background-color: #95a5a6;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #7f8c8d;
+        }
+
+        .btn-danger {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background-color: #c0392b;
+        }
+
+        .message {
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        .message-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .message-info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .protected-content {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="fb-header">
+        <div class="container">
+            <img src="assets/images/logo.png" alt="Logo Déclic Imagerie" class="logo">
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-avatar" id="avatar">U</div>
+                <h1 id="username">Chargement...</h1>
+                <p style="color: #666;">Profil Utilisateur</p>
+            </div>
+
+            <div id="message" class="message"></div>
+
+            <div class="profile-info">
+                <div class="info-row">
+                    <span class="info-label">Nom:</span>
+                    <span class="info-value" id="user-name">-</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Email:</span>
+                    <span class="info-value" id="user-email">-</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">ID Compte:</span>
+                    <span class="info-value" id="user-id" style="font-size: 12px; color: #999;">-</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Connecté depuis:</span>
+                    <span class="info-value" id="user-login-time">-</span>
+                </div>
+            </div>
+
+            <div class="protected-content">
+                <p><strong>✓ Accès Protégé</strong></p>
+                <p>Vous avez accès au contenu protégé du site. Vous pouvez explorer les différentes sections d'imagerie médicale.</p>
+            </div>
+
+            <div class="button-group">
+                <a href="index.html" class="btn btn-secondary">← Accueil</a>
+                <button id="logout-btn" class="btn btn-danger">Se déconnecter</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            // Protect this page
+            window.protect();
+
+            // Get current user
+            const user = window.getCurrentUser();
+
+            if(user){
+                // Display user info
+                document.getElementById('username').textContent = user.name;
+                document.getElementById('user-name').textContent = user.name;
+                document.getElementById('user-email').textContent = user.email;
+                document.getElementById('user-id').textContent = user.id;
+                
+                const loginTime = new Date(user.loginTime);
+                const formattedTime = loginTime.toLocaleString('fr-FR');
+                document.getElementById('user-login-time').textContent = formattedTime;
+
+                // Set avatar initials
+                const initials = user.name
+                    .split(' ')
+                    .map(n => n.charAt(0).toUpperCase())
+                    .join('')
+                    .substring(0, 2);
+                document.getElementById('avatar').textContent = initials;
+            }
+
+            // Logout button
+            document.getElementById('logout-btn').addEventListener('click', function(){
+                if(confirm('Êtes-vous sûr de vouloir vous déconnecter ?')){
+                    window.logout();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

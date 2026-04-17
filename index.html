@@ -47,7 +47,9 @@
                 <li><a href="parcours.html"><i class="fas fa-user"></i> Parcours patient</a></li>
                 <li><a href="radioprotection.html"><i class="fas fa-user"></i> radioprotection</a></li>
                 <li><a href="ressources.html"><i class="fas fa-file-pdf"></i> Ressources</a></li>
-               
+                <li id="auth-navbar" style="border-left: 1px solid rgba(255,255,255,0.3); padding-left: 0.5rem;">
+                    <a id="auth-link" href="login.html"><i class="fas fa-sign-in-alt"></i> Connexion</a>
+                </li>
             </ul>
             <div class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -115,5 +117,23 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Mettre à jour le lien de connexion en fonction du statut
+        document.addEventListener('DOMContentLoaded', function(){
+            const authLink = document.getElementById('auth-link');
+            const user = window.getCurrentUser();
+
+            if(user){
+                // Utilisateur connecté - afficher le profil
+                authLink.href = 'profile.html';
+                authLink.innerHTML = '<i class="fas fa-user-circle"></i> ' + user.name;
+            } else {
+                // Utilisateur non connecté - afficher connexion
+                authLink.href = 'login.html';
+                authLink.innerHTML = '<i class="fas fa-sign-in-alt"></i> Connexion';
+            }
+        });
+    </script>
 </body>
 </html>
